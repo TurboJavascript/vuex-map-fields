@@ -1,6 +1,6 @@
 {
-  "name": "vuex-map-fields",
-  "version": "1.4.1",
+  "name": "vuex-map-fields-two",
+  "version": "0.0.2",
   "description": "Enable two-way data binding for form fields saved in a Vuex store",
   "keywords": [
     "vue",
@@ -8,7 +8,7 @@
     "two-way data binding"
   ],
   "author": "Markus Oberlehner",
-  "homepage": "https://github.com/maoberlehner/vuex-map-fields",
+  "homepage": "https://github.com/gxkai/vuex-map-fields",
   "license": "MIT",
   "scripts": {
     "scripts:umd": "rollup --config --output.format umd --name vuex-map-fields --output.file dist/index.js src/index.js",
@@ -51,10 +51,10 @@
   "module": "dist/index.esm.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/maoberlehner/vuex-map-fields"
+    "url": "https://github.com/gxkai/vuex-map-fields"
   },
   "bugs": {
-    "url": "https://github.com/maoberlehner/vuex-map-fields/issues"
+    "url": "https://github.com/gxkai/vuex-map-fields/issues"
   },
   "browserslist": [
     "> 0.5%",

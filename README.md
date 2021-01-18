@@ -13,7 +13,7 @@
 ## Install
 
 ```bash
-npm install --save vuex-map-fields
+npm install --save vuex-map-fields-two
 ```
 
 ### Basic example
@@ -36,6 +36,10 @@ export default new Vuex.Store({
   state: {
     fieldA: '',
     fieldB: '',
+    data: {
+      fieldA: '',
+      fieldB: '',
+    },
   },
   getters: {
     // Add the `getField` getter to the
@@ -49,14 +53,22 @@ export default new Vuex.Store({
   },
 });
 ```
+```js
+import Vue from 'vue';
+import pl from '@/vuex-map-fileds';
+import store from '../store';
+
+Vue.use(pl, { store });
+```
 
 #### Component
-
 ```html
 <template>
   <div id="app">
     <input v-model="fieldA">
     <input v-model="fieldB">
+    <input v-model="data.fieldA">
+    <input v-model="data.fieldB">
   </div>
 </template>
 
@@ -72,6 +84,7 @@ export default {
     ...mapFields([
       'fieldA',
       'fieldB',
+      'data'
     ]),
   },
 };
