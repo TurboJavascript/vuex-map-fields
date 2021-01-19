@@ -53,13 +53,6 @@ export default new Vuex.Store({
   },
 });
 ```
-```js
-import Vue from 'vue';
-import pl from '@/vuex-map-fileds';
-import store from '../store';
-
-Vue.use(pl, { store });
-```
 
 #### Component
 ```html

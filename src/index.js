@@ -1,11 +1,5 @@
 import arrayToObject from './lib/array-to-object';
 
-let vuexStore = null;
-export default {
-  install: (Vue, { store }) => {
-    vuexStore = store;
-  },
-};
 function objectEntries(obj) {
   return Object.keys(obj).map(key => [key, obj[key]]);
 }
@@ -50,9 +44,9 @@ export const mapFields = normalizeNamespace((namespace, fields, getterType, muta
     const path = fieldsObject[key];
     const field = {
       get() {
-        if (vuexStore) {
-          vuexStore.watch(state => state[path], (value) => {
-            vuexStore.commit(mutationType, { path, value });
+        if (this.$store.watch) {
+          this.$store.watch(state => state[path], (value) => {
+            this.$store.commit(mutationType, { path, value });
           }, { deep: true, immediate: true });
         }
         return this.$store.getters[getterType](path);
